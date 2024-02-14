@@ -68,12 +68,30 @@ div{
     text-align: center;
     left: 25%;
 }
-@media only screen and (min-width: 714px) {
+@media only screen and (min-width: 667px) {
     .cards ul{
-        flex-wrap: wrap;
+        /* flex-wrap: wrap; */
+        
+            columns: 2;
+            -webkit-columns: 2;
+            -moz-columns: 2;
     }
     .cards{
-        width: 50%;
-        flex-wrap: wrap;
+        width: 100%;
+        /* flex-wrap: wrap; */
+    }
+}
+@media only screen and (min-width: 870px){
+    .cards ul{
+            columns: 3;
+            -webkit-columns: 3;
+            -moz-columns: 3;
+    }
+}
+@media only screen and (min-width: 1084px){
+    .cards ul{
+            columns: 4;
+            -webkit-columns: 4;
+            -moz-columns: 4;
     }
 }
