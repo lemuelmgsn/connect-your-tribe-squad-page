@@ -23,7 +23,7 @@ div{
     display: flex;
     justify-content: space-evenly;
 }
-.filter ul li{
+.filter ul button{
     background-color: rgb(211, 211, 211);
     padding: 1em;
     border-radius: 2em;
@@ -47,13 +47,14 @@ div{
     position: relative;
     text-align: center;
     height: 200px;
-    background-image: linear-gradient(
+    background-color: #86ECCD;
+    /* background-image: linear-gradient(
         white 20%, 
         #86ECCD 0 80%, 
-        #86ECCD 0 );
+        #86ECCD 0 ); */
     /* when putting both off the articles are aligned straight */
     /* padding: 1em; */
-    /* margin: 1em;  */
+    /* margin-bottom: 1em;  */
 }
 .cards ul a{
     font-size:1.5em;
@@ -62,7 +63,7 @@ div{
     color: black;
 }
 .cards ul li img{
-    position:absolute;
+    position: absolute;
     height: 200px;
     text-align: center;
     left: 25%;

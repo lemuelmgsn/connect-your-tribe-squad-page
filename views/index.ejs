@@ -10,10 +10,10 @@
 <div class="filter">
   <p>Filter op:</p>
   <ul>
-    <li>Kapsels</li>
-    <li>Avatars</li>
-    <li>Woonplaats</li>
-    <li>...</li>
+    <button>Kapsels</button>
+    <button>Avatars</li>
+    <button>Woonplaats</button>
+    <button>...</button>
   </ul>
 </div>
 
@@ -22,7 +22,12 @@
     <ul>
       <% persons.forEach(person => { %>
         <li>
-          <img src="/images/transparent person black.png">
+          <!-- <img src="/images/transparent person black.png"> -->
+          <img src="<% if (person.avatar) { %>
+            <%= person.avatar %>
+          <% } else { %>
+            /images/transparent person black.png
+          <% } %>">
         </li>
         <a href="./person/<%= person.id %>"><%= person.name %></a>
       <% }) %>
@@ -34,6 +39,8 @@
     <li>lem</li>
   </ul> -->
 </section>
+
+
 
 
 
