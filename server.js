@@ -13,6 +13,9 @@ const squadData = await fetchJson(apiUrl + '/squad')
 // Maak een nieuwe express app aan
 const app = express()
 
+// messages dinges test -------------------------------------------------------------------------------------------------------------
+const messages = []
+
 // Stel ejs in als template engine
 app.set('view engine', 'ejs')
 
@@ -21,6 +24,8 @@ app.set('views', './views')
 
 // Gebruik de map 'public' voor statische resources, zoals stylesheets, afbeeldingen en client-side JavaScript
 app.use(express.static('public'))
+
+app.use(express.urlencoded({extended: true}))
 
 // Maak een GET route voor de index
 app.get('/', function (request, response) {
@@ -33,13 +38,20 @@ app.get('/', function (request, response) {
     // Je zou dat hier kunnen filteren, sorteren, of zelfs aanpassen, voordat je het doorgeeft aan de view
 
     // Render index.ejs uit de views map en geef de opgehaalde data mee als variabele, genaamd persons
-    response.render('index', {persons: apiData.data, squads: squadData.data})
+    response.render('index', {
+      persons: apiData.data,
+      squads: squadData.data,
+      messages: messages
+    })
   })
 })
 
 // Maak een POST route voor de index
 app.post('/', function (request, response) {
   // Er is nog geen afhandeling van POST, redirect naar GET op /
+
+  messages.push(request.body.bericht)
+
   response.redirect(303, '/')
 })
 
@@ -48,7 +60,7 @@ app.get('/person/:id', function (request, response) {
   // Gebruik de request parameter id en haal de juiste persoon uit de WHOIS API op
   fetchJson(apiUrl + '/person/' + request.params.id).then((apiData) => {
     // Render person.ejs uit de views map en geef de opgehaalde data mee als variable, genaamd person
-    response.render('person', {person: apiData.data, squads: squadData.data})
+    response.render('person', {person: apiData.data,squads: squadData.data,})
   })
 })
 

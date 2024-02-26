@@ -17,6 +17,22 @@
   </ul>
 </div>
 
+<article class="bericht-article">
+  <h2>Berichten van studenten</h2>
+<ul>
+  <% messages.forEach(message => { %>
+    <li><%= message %></li>
+    <% }) %>
+</ul>
+</article>
+
+<form method="post" action="/">
+<label>Berichtje: 
+  <textarea required name="bericht"></textarea>
+</label>  
+<button type="submit">Verzend</button>
+</form>
+
 <section class="cards">
   <h2>Avatars</h2>
     <ul>
@@ -32,6 +48,7 @@
         <a href="./person/<%= person.id %>"><%= person.name %></a>
       <% }) %>
     </ul>
+
   <!-- <ul>
     <li>Lem</li>
     <li>Lem></li>

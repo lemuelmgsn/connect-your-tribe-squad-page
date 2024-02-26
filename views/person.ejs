@@ -4,6 +4,12 @@
 
 <h2><%= person.name %></h2>
 
+<img src="<% if (person.avatar) { %>
+    <%= person.avatar %>
+  <% } else { %>
+    /images/transparent person black.png
+  <% } %>" class="image-test">
+
 <p>Squad: <%= person.squad_id %>
 
 <%- include('./partials/foot') %>

@@ -92,3 +92,18 @@ div{
             -moz-columns: 4;
     }
 }
+.bericht-article{
+    padding: 1em;
+}
+.bericht-article h2{
+    font-size: 1.7em;
+}
+.bericht-article > li{
+    padding: 2em;
+}
+form{
+    display: block;
+}
+textarea{
+    height: 50px;
+}
