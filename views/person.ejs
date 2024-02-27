@@ -1,15 +1,33 @@
 <%- include('./partials/head') %>
 
-<a href="/">Back</a>
+<a href="/" class="back-btn">Back</a>
 
-<h2><%= person.name %></h2>
+<section class="person-ejs">
 
-<img src="<% if (person.avatar) { %>
-    <%= person.avatar %>
-  <% } else { %>
-    /images/transparent person black.png
-  <% } %>" class="image-test">
+  <h2><%= person.name %></h2>
 
-<p>Squad: <%= person.squad_id %>
+  <img src="<% if (person.avatar) { %>
+      <%= person.avatar %>
+    <% } else { %>
+      /images/transparent person black.png
+    <% } %>" class="image-test">
+
+</section>
+
+<form method="post" action="/">
+  <label>Berichtje: 
+    <textarea required name="bericht"></textarea>
+  </label>  
+  <button type="submit">Verzenden</button>
+  </form>
+
+  <!-- <article class="bericht-article">
+    <h2>Berichten van studenten</h2>
+  <ul>
+    <% messages.forEach(message => { %>
+      <li><%= message %></li>
+      <% }) %>
+  </ul>
+  </article> -->
 
 <%- include('./partials/foot') %>

@@ -56,6 +56,11 @@ div{
     /* padding: 1em; */
     /* margin-bottom: 1em;  */
 }
+.cards ul li:hover{
+    translate: 0 -1em;
+    transition: 1s;
+    cursor: pointer;
+}
 .cards ul a{
     font-size:1.5em;
     /* padding-left: .7em; aligns the names */
@@ -102,7 +107,7 @@ div{
     padding: 2em;
 }
 form{
-    border: 1px red solid;
+    /* border: 1px red solid; */
     display: flex;
     flex-direction: column;
 }
@@ -120,4 +125,19 @@ textarea{
     height: 50px;
     display: block;
     margin: .5em;
+}
+/* styling voor de person ejs */
+
+.person-ejs{
+   text-align: center;
+}
+.person-ejs h2{
+    text-align: center;
+    translate: -7em;
+}
+.back-btn{
+    margin: 2em;
+    padding: 2em;
+    background-color: rgb(113, 113, 113);
+    border-radius: 80px 5px 5px 10px;
 }
