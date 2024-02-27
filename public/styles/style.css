@@ -102,8 +102,22 @@ div{
     padding: 2em;
 }
 form{
-    display: block;
+    border: 1px red solid;
+    display: flex;
+    flex-direction: column;
+}
+form > label{
+    margin-left: .5em
+    ;
+}
+form > button{
+    border-radius: 1.5em;
+    padding: .5em;
+    width: 6em;
+    margin-left: .5em;
 }
 textarea{
     height: 50px;
+    display: block;
+    margin: .5em;
 }
