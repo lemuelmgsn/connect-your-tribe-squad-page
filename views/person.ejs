@@ -2,26 +2,93 @@
 
 <a href="/" class="back-btn">Back</a>
 
-<section class="person-ejs">
+<!-- <section class="person-ejs">
 
   <h2><%= person.name %></h2>
 
-  <img src="<% if (person.avatar) { %>
-      <%= person.avatar %>
-    <% } else { %>
-      /images/transparent person black.png
-    <% } %>" class="image-test">
 
-</section>
+</section> -->
+<div class="naam">
+  <h2><%= person.name %></h2>
+</div>
 
-<form method="post" action="/">
+<div class="person-ejs">
+  <!-- <h2><%= person.name %></h2> -->
+  <div class="flip-card">
+    
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        <img src="<% if (person.avatar) { %>
+          <%= person.avatar %>
+        <% } else { %>
+          /images/transparent person black.png
+        <% } %>" class="image-test">
+      </div>
+
+      <div class="flip-card-back">
+
+        <!-- <form method="post" action="/">
+            <label>Comments: 
+              <textarea required name="bericht" placeholder="Typ hier..."></textarea>
+            </label>  
+          <button type="submit" class="verzend-btn">Verzenden</button>
+        </form> -->
+  
+        <article class="bericht-article">
+          <label>Comments: 
+            <textarea required name="bericht" placeholder="Typ hier..."></textarea>
+          </label>  
+
+            <h2>Berichten van studenten</h2>
+          <ul>
+            <% messages.forEach(message => { %>
+              <li><%= message %></li>
+              <% }) %>
+          </ul>
+         </article>
+
+      <form method="post" action="/">
+        <button type="submit" class="verzend-btn">Verzenden</button>
+      </form>
+
+      
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<form method="POST" action="/person/<%= person.id %>">
+  <% if (person.custom.like) { %>
+    <button type="submit" name="actie" value="niet-zo-leuk-sorry"> Unlike 💔</button>
+  <% } else { %>
+  <button type="submit" name="actie" value="leuk-hoor">Like ❤️</button>
+  <% } %>
+</form>
+
+<!-- <div class="test-test">
+<p>hoi</p>
+</div>
+
+<div class="test-test-2">
+  <p>hoi</p>
+  </div> -->
+  
+
+
+
+
+
+
+
+<!-- <form method="post" action="/">
   <label>Berichtje: 
     <textarea required name="bericht"></textarea>
   </label>  
   <button type="submit">Verzenden</button>
   </form>
 
-  <!-- <article class="bericht-article">
+  <article class="bericht-article">
     <h2>Berichten van studenten</h2>
   <ul>
     <% messages.forEach(message => { %>
@@ -29,5 +96,13 @@
       <% }) %>
   </ul>
   </article> -->
+
+
+
+
+
+
+
+
 
 <%- include('./partials/foot') %>

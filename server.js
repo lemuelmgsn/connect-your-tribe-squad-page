@@ -13,7 +13,7 @@ const squadData = await fetchJson(apiUrl + '/squad')
 // Maak een nieuwe express app aan
 const app = express()
 
-// messages dinges test -------------------------------------------------------------------------------------------------------------
+// messages test
 const messages = []
 
 // Stel ejs in als template engine
@@ -60,7 +60,11 @@ app.get('/person/:id', function (request, response) {
   // Gebruik de request parameter id en haal de juiste persoon uit de WHOIS API op
   fetchJson(apiUrl + '/person/' + request.params.id).then((apiData) => {
     // Render person.ejs uit de views map en geef de opgehaalde data mee als variable, genaamd person
-    response.render('person', {person: apiData.data,squads: squadData.data,})
+    response.render('person', {
+      person: apiData.data,
+      squads: squadData.data,
+      messages: messages 
+    })
   })
 })
 
@@ -72,3 +76,42 @@ app.listen(app.get('port'), function () {
   // Toon een bericht in de console en geef het poortnummer door
   console.log(`Application started on http://localhost:${app.get('port')}`)
 })
+
+// LIKE BUTTON - AKIKO 
+
+// Als we vanuit de browser een POST doen op de detail pagina
+app.post('/person/:id', function (request, response) {
+ 
+  // console.log('/person/'+request.params.id + ' route werkt!')
+ 
+  // Stap 1: Haal de huidige gegevens op voor deze persoon
+  fetchJson('https://fdnd.directus.app/items/person/' + request.params.id).then((apiUrl) => {
+ 
+  try {
+    apiUrl.data.custom = JSON.parse(apiUrl.data.custom)
+  } catch (error) {
+    apiUrl.data.custom ={}
+  }
+ 
+  // Stap 2 voeg like toe aan custom object
+ 
+  if (request.body.actie == 'leuk-hoor') {
+    apiUrl.data.custom.like = true
+  } else if (request.body.actie == 'niet-zo-leuk-sorry')  {
+    apiUrl.data.custom.like = false
+  }
+ 
+  // Stap 3 overschrijf het custom field voor deze persoon
+ 
+  fetchJson('https://fdnd.directus.app/items/ /' + request.params.id, {
+  method: 'PATCH',
+  body: JSON.stringify({
+    custom: apiUrl.data.custom
+  }),
+  headers: {'Content-type': 'application/json; charset=UTF-8'
+}
+  }).then(() => {
+    response.redirect(303, '/person/' + request.params.id)
+  });
+  });
+});

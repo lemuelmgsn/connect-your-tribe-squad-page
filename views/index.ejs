@@ -1,37 +1,16 @@
 <%- include('./partials/head') %>
 
-<!-- <h2>Students</h2>
-<ul>
-  <% persons.forEach(person => { %>
-    <li><a href="./person/<%= person.id %>"><%= person.name %></a>, squad_id <%= person.squad_id %></li>
-  <% }) %>
-</ul> -->
+
 
 <div class="filter">
   <p>Filter op:</p>
   <ul>
     <button>Kapsels</button>
-    <button>Avatars</li>
+    <button class="avatar-btn">Avatars</li>
     <button>Woonplaats</button>
     <button>...</button>
   </ul>
 </div>
-
-<!-- <article class="bericht-article">
-  <h2>Berichten van studenten</h2>
-<ul>
-  <% messages.forEach(message => { %>
-    <li><%= message %></li>
-    <% }) %>
-</ul>
-</article>
-
-<form method="post" action="/">
-<label>Berichtje: 
-  <textarea required name="bericht"></textarea>
-</label>  
-<button type="submit">Verzenden</button>
-</form> -->
 
 <section class="cards">
   <h2>Avatars</h2>
@@ -39,13 +18,17 @@
       <% persons.forEach(person => { %>
         <a href="./person/<%= person.id %>">
         <li>
+          <!-- <p><%= person.name %></p> -->
           <img src="<% if (person.avatar) { %>
             <%= person.avatar %>
           <% } else { %>
             /images/transparent person black.png
           <% } %>">
+          <p><%= person.name %></p>
         </li>
-        <%= person.name %>
+
+
+        <!-- <%= person.name %> -->
         </a>
       <% }) %>
     </ul>

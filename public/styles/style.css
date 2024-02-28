@@ -7,13 +7,11 @@ h1{
     text-align: center;
     padding: 1em;
 }
-h2{
-    padding-left: 1em;
-}
 div{
-    background-color: #fafafa;
+    background-color: #ffffff;
     height: 100px;
     width: 100%;
+    /* border-bottom: 1px black solid; */
 }
 .filter{
     padding-bottom: 1em;
@@ -21,12 +19,17 @@ div{
 .filter ul{
     list-style-type: none;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: flex-start;
+    margin-left: 10em;
+    margin-bottom: 2em;
 }
 .filter ul button{
-    background-color: rgb(211, 211, 211);
+    /* background-color: rgb(211, 211, 211); */
+    background-color: white;
+    color: black;
     padding: 1em;
     border-radius: 2em;
+
 }
 .filter p{
     padding: 1em;
@@ -38,23 +41,25 @@ div{
     height: 100%;
     margin-top: 1em;
     width: 100%;
+    text-align: center;
 }
 .cards ul{
     list-style-type: none;
     display: flexbox;
+    text-align: center;
+    gap: 1em;
 }
 .cards ul li{
     position: relative;
     text-align: center;
-    height: 200px;
-    background-color: #86ECCD;
-    /* background-image: linear-gradient(
-        white 20%, 
-        #86ECCD 0 80%, 
-        #86ECCD 0 ); */
-    /* when putting both off the articles are aligned straight */
-    /* padding: 1em; */
-    /* margin-bottom: 1em;  */
+    height: 230px;
+    /* background-color: #86ECCD; */
+    background-image: linear-gradient(
+        transparent 10%, 
+        #86ECCD 0 90%, 
+        #86ECCD 0 );
+    text-align: center;
+    /* margin: 1em; */
 }
 .cards ul li:hover{
     translate: 0 -1em;
@@ -69,9 +74,12 @@ div{
 }
 .cards ul li img{
     position: absolute;
-    height: 200px;
+    height: 160px;
     text-align: center;
+    translate: 0 0.9em;
     left: 25%;
+    border-radius: 2em;
+    text-align: center;
 }
 @media only screen and (min-width: 667px) {
     .cards{
@@ -126,6 +134,7 @@ textarea{
     display: block;
     margin: .5em;
 }
+
 /* styling voor de person ejs */
 
 .person-ejs{
@@ -133,7 +142,6 @@ textarea{
 }
 .person-ejs h2{
     text-align: center;
-    translate: -7em;
 }
 .back-btn{
     margin: 2em;
@@ -141,3 +149,161 @@ textarea{
     background-color: rgb(113, 113, 113);
     border-radius: 80px 5px 5px 10px;
 }
+.cards h2{
+    margin-bottom: 2em;
+    margin-top: 1em;
+    border-top: 1px black solid;
+}
+.cards p{
+    position: absolute;
+    font-weight: 500;
+}
+
+
+/* test test */
+
+.flip-card {
+    background-color: transparent;
+    width: 400px;
+    height: 400px;
+    perspective: 1000px;
+  }
+  .image-test{
+    height: 400px;
+    width: 400px;
+  }
+  
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+      background-color: yellow;
+  }
+  
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    /* border: 1px red solid; */
+  }
+  
+  .flip-card-front {
+    background-color: #bbb;
+    color: black;
+  }
+  
+  .flip-card-back {
+    background-color: white;
+    color: black;
+    transform: rotateY(180deg);
+    overflow: auto;
+  }
+  /*  */
+  
+  .person-ejs{
+  display: flex;
+  justify-content: center;
+  }
+  .naam{
+    width: 100vw;
+    display: flex;
+  justify-content: center;
+  }
+  .person-ejs h2{
+  display: flex;
+  justify-content: center;
+  }
+  .back-btn{
+     margin: 2em;
+     padding: 2em;
+     background-color: rgb(113, 113, 113);
+     border-radius: 80px 5px 5px 10px;
+  }
+  .cards h2{
+     margin-bottom: 2em;
+     margin-top: 1em;
+     border-top: 1px black solid;
+  }
+  .cards p{
+     position: absolute;
+     bottom: 0;
+     /* writing-mode: vertical-lr;
+     text-orientation: upright; */
+     font-weight: 500;
+  }
+
+
+
+  /* .test-test{
+    translate: 50em 10em;
+    width: 6em;
+    height: 1.5em;
+    background-color: grey;
+    padding: 2em;
+    border-radius: 3em 3em 3em 0;
+  }
+
+  .test-test-2{
+    translate: 60em 10em;
+    width: 6em;
+    height: 1.5em;
+    background-color: grey;
+    padding: 2em;
+    border-radius: 3em 3em 0 3em;
+  } */
+  textarea{
+    border: none;
+    /* border-radius: 2em; */
+  }
+  /* .bericht-article{
+    overflow: auto;
+
+  } */
+  .bericht-article ul{
+    list-style-type: none;
+  }
+  .bericht-article li{
+    width: 4em;
+    height: 1.5em;
+    background-color: grey;
+    padding: 1em;
+    border-radius: 3em 3em 3em 0;
+    margin: .5em;
+  }
+
+  .bericht-article li:nth-of-type(even){
+    border-radius:  3em 3em 0 3em;
+  }
+
+  .bericht-article li:nth-of-type(3n){
+    border-radius:  3em 3em 3em 0;
+  }
+
+  .bericht-article li:nth-of-type(5n + 3){
+    border-radius:  3em 3em 0 3em;
+  }
+
+  .flip-card-back form {
+    position: sticky;
+    bottom: 0;
+    /* display: flex; */
+    /* justify-content: flex-end; */
+  }
+
+  .verzend-btn{
+    width: 7em;
+    height: 2em;
+    background-color: grey;
+    padding: .5em;
+    border-radius: 3em 3em 0 3em ;
+    margin-left: auto;
+  }
