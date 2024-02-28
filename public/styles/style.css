@@ -275,9 +275,13 @@ textarea{
     width: 4em;
     height: 1.5em;
     background-color: grey;
+    color: black;
     padding: 1em;
     border-radius: 3em 3em 3em 0;
     margin: .5em;
+  }
+  .bericht-article p{
+    color: black;
   }
 
   .bericht-article li:nth-of-type(even){
