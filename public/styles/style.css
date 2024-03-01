@@ -36,7 +36,8 @@ h1{
     padding: 1em;
 
      /* lichte kleur 1ste pallet (groene kleuren) */
-    color: var(--color-16);
+    /* color: var(--color-16); */
+    color: white;
 
     /* lichte kleur 2de pallet pallet(roze kleur) */
     /* color: var(--color-18); */
@@ -61,7 +62,8 @@ div{
     /* background-color: rgb(211, 211, 211); */
     /* lichte kleur 1ste pallet (groene kleuren) */
     background-color: var(--color-13);
-    color: var(--color-16);
+    /* color: var(--color-16); */
+    color: white;
 
     /* lichte kleur 2de pallet pallet(roze kleur) */
     /* background-color: var(--color-18);
