@@ -1,14 +1,48 @@
+:root {
+  /* Lichte thema pallet */
+  /* Pallet 1 */
+  --color-13: #164A41;
+  --color-14: #4D774E;
+  --color-15: #9DC88D;
+  --color-16: #F1B24A;
+  --color-17: #FFFFFF;
+
+  /* Pallet 2 */
+  --color-18: #190933;
+  --color-19: #EE9E8E;
+  --color-20: #FFDBC3;
+  --color-21: #FFF5E0;
+}
+
 *{
     padding: 0;
     margin: 0;
     font-family: sans-serif;
 }
+body {
+   /* lichte kleur 1ste pallet (groene kleuren) */
+  /* background-color: var(--color-13); */
+  background: linear-gradient( to right,
+                              var(--color-13),
+                              var(--color-14),
+                              var(--color-15)
+  );
+
+  /* lichte kleur 2de pallet pallet(roze kleur) */
+  /* background-color: var(--color-20); */
+}
 h1{
     text-align: center;
     padding: 1em;
+
+     /* lichte kleur 1ste pallet (groene kleuren) */
+    color: var(--color-16);
+
+    /* lichte kleur 2de pallet pallet(roze kleur) */
+    /* color: var(--color-18); */
 }
 div{
-    background-color: #ffffff;
+    background: transparent;
     height: 100px;
     width: 100%;
     /* border-bottom: 1px black solid; */
@@ -25,8 +59,14 @@ div{
 }
 .filter ul button{
     /* background-color: rgb(211, 211, 211); */
-    background-color: white;
-    color: black;
+    /* lichte kleur 1ste pallet (groene kleuren) */
+    background-color: var(--color-13);
+    color: var(--color-16);
+
+    /* lichte kleur 2de pallet pallet(roze kleur) */
+    /* background-color: var(--color-18);
+    color: var(--color-20); */
+
     padding: 1em;
     border-radius: 2em;
 
@@ -35,11 +75,17 @@ div{
     padding: 1em;
     font-size: 1.5em;
     font-weight: bold;
+    /* lichte kleur 1ste pallet (groene kleuren) */
+    color: var(--color-17);
+
+    /* lichte kleur 2de pallet pallet(roze kleur) */
+    /* color: var(--color-18); */
 }
 .cards{
-    background-color: white;
+    background: transparent;
     height: 100%;
     margin-top: 1em;
+    padding: 30px 30px;
     width: 100%;
     text-align: center;
 }
@@ -54,10 +100,15 @@ div{
     text-align: center;
     height: 230px;
     /* background-color: #86ECCD; */
-    background-image: linear-gradient(
+    /* background-image: linear-gradient(
         transparent 10%, 
         #86ECCD 0 90%, 
-        #86ECCD 0 );
+        #86ECCD 0 ); */
+    /* lichte kleur 1ste pallet (groene kleuren) */
+    background-color: var(--color-15);
+
+    /* lichte kleur 2de pallet pallet(roze kleur) */
+    /* background-color: var(--color-19); */
     text-align: center;
     /* margin: 1em; */
 }
@@ -153,10 +204,20 @@ textarea{
     margin-bottom: 2em;
     margin-top: 1em;
     border-top: 1px black solid;
+    /* lichte kleur 1ste pallet (groene kleuren) */
+    color: var(--color-13);
+
+    /* lichte kleur 2de pallet pallet(roze kleur) */
+    /* color: var(--color-18); */
 }
 .cards p{
     position: absolute;
     font-weight: 500;
+    /* lichte kleur 1ste pallet (groene kleuren) */
+    color: var(--color-13);
+
+    /* lichte kleur 2de pallet pallet(roze kleur) */
+    /* color: var(--color-18); */
 }
 
 
@@ -202,8 +263,13 @@ textarea{
   }
   
   .flip-card-back {
-    background-color: white;
-    color: black;
+    /* background-color: white; */
+    /* lichte kleur 1ste pallet (groene kleuren) */
+    background-color: var(--color-13);
+
+    /* lichte kleur 2de pallet pallet(roze kleur) */
+    /* background-color: var(--color-19); */  
+    /* color: black; */
     transform: rotateY(180deg);
     overflow: auto;
   }
@@ -225,7 +291,14 @@ textarea{
   .back-btn{
      margin: 2em;
      padding: 2em;
-     background-color: rgb(113, 113, 113);
+     /* background-color: rgb(113, 113, 113); */
+     /* lichte kleur 1ste pallet (groene kleuren) */
+     background-color: var(--color-16);
+     color: var(--color-17);
+
+     /* lichte kleur 2de pallet pallet(roze kleur) */
+     /* background-color: var(--color-18);
+     color: var(--color-19); */
      border-radius: 80px 5px 5px 10px;
   }
   .cards h2{
@@ -239,6 +312,13 @@ textarea{
      /* writing-mode: vertical-lr;
      text-orientation: upright; */
      font-weight: 500;
+  }
+  h2 {
+    /* lichte kleur 1ste pallet (groene kleuren) */
+    color: var(--color-17);
+
+    /* lichte kleur 2de pallet pallet(roze kleur) */
+    /* color: var(--color-18); */
   }
 
 
@@ -281,7 +361,12 @@ textarea{
     margin: .5em;
   }
   .bericht-article p{
-    color: black;
+    /* color: black; */
+    /* lichte kleur 1ste pallet (groene kleuren) */
+    color: var(--color-17);
+
+    /* lichte kleur 2de pallet pallet(roze kleur) */
+    /* color: var(--color-21); */
   }
 
   .bericht-article li:nth-of-type(even){
@@ -306,7 +391,13 @@ textarea{
   .verzend-btn{
     width: 7em;
     height: 2em;
-    background-color: grey;
+    /* lichte kleur 1ste pallet (groene kleuren) */
+    background-color: var(--color-16);
+    color: var(--color-17);
+
+    /* lichte kleur 2de pallet pallet(roze kleur) */
+    /* background-color: var(--color-18);
+    color: var(--color-21); */
     padding: .5em;
     border-radius: 3em 3em 0 3em ;
     margin-left: auto;

@@ -1,3 +1,40 @@
+:root {
+  /* Donker thema apllete */
+  /* Pallet 1 */
+  --color-1: #101E2F;
+  --color-2: #242F49;
+  --color-3: #384358;
+  --color-4: #FFA586;
+  --color-5: #B51A2B;
+  --color-6: #541A2B;
+
+  /* Pallet 2 */
+  --color-7:  #05161A;
+  --color-8:  #072E33;
+  --color-9:  #0C7075;
+  --color-10: #0F969C;
+  --color-11: #6DA5C0;
+  --color-12: #294D61;
+
+  /* Lichte thema pallet */
+  /* Pallet 1 */
+  --color-13: #164A41;
+  --color-14: #4D774E;
+  --color-15: #9DC88D;
+  --color-16: #F1B24A;
+  --color-17: #FFFFFF;
+
+  /* Pallet 2 */
+  --color-18: #190933;
+  --color-19: #EE9E8E;
+  --color-20: #FFDBC3;
+  --color-21: #FFF5E0;
+}
+
+
+
+
+
 /* test */
 /* *{
   padding: 0;
