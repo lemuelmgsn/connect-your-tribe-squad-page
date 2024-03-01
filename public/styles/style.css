@@ -100,12 +100,12 @@ div{
     text-align: center;
     height: 230px;
     /* background-color: #86ECCD; */
-    /* background-image: linear-gradient(
+    background-image: linear-gradient(
         transparent 10%, 
-        #86ECCD 0 90%, 
-        #86ECCD 0 ); */
+        var(--color-15) 0 90%, 
+        var(--color-15) 0 );
     /* lichte kleur 1ste pallet (groene kleuren) */
-    background-color: var(--color-15);
+    /* background-color: var(--color-15); */
 
     /* lichte kleur 2de pallet pallet(roze kleur) */
     /* background-color: var(--color-19); */
@@ -242,7 +242,7 @@ textarea{
     transition: transform 0.6s;
     transform-style: preserve-3d;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-      background-color: yellow;
+    background-color: yellow;
   }
   
   .flip-card:hover .flip-card-inner {
@@ -309,8 +309,6 @@ textarea{
   .cards p{
      position: absolute;
      bottom: 0;
-     /* writing-mode: vertical-lr;
-     text-orientation: upright; */
      font-weight: 500;
   }
   h2 {
@@ -361,9 +359,10 @@ textarea{
     margin: .5em;
   }
   .bericht-article p{
-    /* color: black; */
+    color: black;
     /* lichte kleur 1ste pallet (groene kleuren) */
-    color: var(--color-17);
+    /* color: var(--color-17); */
+    z-index: 99;
 
     /* lichte kleur 2de pallet pallet(roze kleur) */
     /* color: var(--color-21); */
